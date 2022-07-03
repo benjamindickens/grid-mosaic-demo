@@ -1,0 +1,201 @@
+@use "@scss/common" as var;
+
+.mosaic {
+
+  &__caption {
+    background-color: #b52e17;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include var.max-width(var.$mobile) {
+      display: none
+    }
+  }
+
+  &__title {
+    color: #fff;
+    white-space: nowrap;
+    font-size: 4.4rem;
+    line-height: 2;
+    text-align: center;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+
+    @include var.max-width(var.$mobile) {
+      font-size: 1rem;
+    }
+  }
+
+  &-bg {
+    &._bg-1 {
+      background-image: url("@images/1.svg");
+    }
+
+
+    &._bg-2 {
+      background-image: url("@images/2.svg");
+    }
+
+
+    &._bg-3 {
+      background-image: url("@images/3.svg");
+    }
+
+
+    &._bg-4 {
+      background-image: url("@images/4.svg");
+    }
+
+
+    &._bg-5 {
+      background-image: url("@images/5.svg");
+    }
+
+
+    &._bg-6 {
+      background-image: url("@images/6.svg");
+    }
+
+
+    &._bg-7 {
+      background-image: url("@images/7.svg");
+
+    }
+
+    &._bg-8 {
+      background-image: url("@images/8.svg");
+    }
+
+
+    &._bg-9 {
+      background-image: url("@images/9.svg");
+    }
+
+    &._bg-10 {
+      background-image: url("@images/10.svg");
+    }
+
+    &._bg-11 {
+      background-image: url("@images/11.svg");
+    }
+  }
+
+
+  &__tooltip {
+    color: #fff;
+    position: absolute;
+    width: 28.9rem;
+    height: 18.2rem;
+    background-color: #b52e17;
+    background-image: url("@images/after-bg.svg");
+    background-repeat: no-repeat;
+    background-position: top right;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    transform: translateX(100%);
+    visibility: hidden;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1.4rem 1.6rem 1.4rem 1.4rem;
+    box-sizing: border-box;
+    animation: back-img .5s ease-in-out forwards;
+
+    &:before {
+      content: '';
+      width: 2.1rem;
+      height: 3.5rem;
+      background-image: url("@images/arrow.svg");
+      background-repeat: no-repeat;
+      background-size: 107%;
+      position: absolute;
+      top: 3rem;
+      left: -2.1rem;
+      z-index: 2;
+      display: none;
+    }
+
+    &-title {
+      font-size: 1.6rem;
+      line-height: 1.1;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 1.2rem;
+    }
+
+    &-title-content {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      height: 6rem;
+      font-size: 1.6rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+  }
+
+  &-item.beyond-bottom {
+    & .mosaic__tooltip {
+      &:before {
+        top: auto;
+        bottom: -2.5rem;
+        left: 2.5rem;
+        right: auto;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &-item:hover {
+    @include var.min-width(var.$mobile) {
+
+      & .mosaic__tooltip {
+        visibility: visible;
+      }
+
+      &:before {
+        display: flex;
+      }
+    }
+  }
+
+  &-item.beyond-right {
+    & .mosaic__tooltip {
+      transform: translate(-100%, 0);
+      right: auto;
+      bottom: auto;
+      left: 0;
+      top: 0;
+
+      &:before {
+        top: 3rem;
+        right: -2.1rem;
+        bottom: auto;
+        left: auto;
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  &-item.beyond-angle {
+    & .mosaic__tooltip {
+      transform: translate(0, -100%);
+      left: auto;
+      bottom: auto;
+      right: 0;
+      top: 0;
+
+      &:before {
+        top: auto;
+        bottom: -2.5rem;
+        right: 2.5rem;
+        left: auto;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+}

@@ -1,0 +1,87 @@
+@use "@scss/common" as var;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    font-weight: unset;
+}
+
+html {
+    scroll-behavior: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizelegibility;
+    font-size: 0.69vw; //1440
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+@include var.max-width(var.$mobile) {
+    html {
+        font-size: 2.77vw;
+    }
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border-color: transparent;
+}
+
+main, img {
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+picture img {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    box-shadow: 0 0 0px 1000px #ffffff inset !important;
+}
+
+button {
+    background: transparent;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    border-color: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+span {
+    text-decoration: inherit;
+    text-transform: inherit;
+}
+
