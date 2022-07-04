@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
     mode: 'production',
-    entry: ['./src/js/index.js', './src/scss/index.scss'],
+    entry: ['./src/js/index.js'],
     output: {
         path: path.resolve('public'),
         filename: "index.js"
@@ -13,7 +13,7 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/i,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    "style-loader",
                     "css-loader",
                     "sass-loader",
                 ],
@@ -25,11 +25,6 @@ module.exports = {
             },
         ],
     },
-    plugins: [
-        new MiniCssExtractPlugin({
-            filename: 'index.css',
-        })
-    ],
     resolve: {
         extensions: ['.js'],
         alias: {
