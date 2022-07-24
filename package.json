@@ -17,6 +17,6 @@
     "webpack-cli": "^4.10.0"
   },
   "dependencies": {
-    "grid-mosaic": "^1.2.0"
+    "grid-mosaic": "^1.3.2"
   }
 }

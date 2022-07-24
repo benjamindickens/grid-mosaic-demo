@@ -25,7 +25,7 @@ const setPopupClasses = (element, container) => {
 }
 
 const mosaicOption = {
-    breakpoint: 768,
+    breakpoint: 667,
     measure: "rem",
     maxSize: {
         desktop: {
