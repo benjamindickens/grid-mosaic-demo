@@ -1,6 +1,7 @@
 import Mosaic from "grid-mosaic";
 
-const mosaicContainer = document.querySelector(".mosaic");
+const mosaicContainer = document.querySelector(".js-container-1");
+const mosaicContainer2 = document.querySelector(".js-container-2");
 
 const removePopupClasses = (element) => {
     element.classList.remove("beyond-right", "beyond-angle", "beyond-bottom")
@@ -83,4 +84,4 @@ const mosaicOption = {
 
 
 const mosaic = new Mosaic(mosaicContainer, mosaicOption)
-
+const mosaic2 = new Mosaic(mosaicContainer2, mosaicOption)
