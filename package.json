@@ -19,6 +19,6 @@
     "webpack-dev-server": "^4.9.3"
   },
   "dependencies": {
-    "grid-mosaic": "^1.4.0"
+    "grid-mosaic": "^1.5.0"
   }
 }
